@@ -185,7 +185,7 @@ function startGame() {
   stopGame();
   setDuration();
   setEventListeners();
-  startTimer(timerDisplay);
+  startTimer(time);
   showUp();
   return "game started";
 }
