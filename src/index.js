@@ -8,7 +8,7 @@ let time = 10;
 let timer;
 let lastHole = 0;
 let points = 0;
-let difficulty = "easy";
+let difficulty = "hard";
 
 function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
