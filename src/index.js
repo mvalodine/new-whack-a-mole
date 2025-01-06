@@ -8,7 +8,7 @@ let time = 10;
 let timer;
 let lastHole = 0;
 let points = 0;
-let difficulty = "hard";
+let difficulty = "easy";
 
 function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -22,7 +22,6 @@ function setDelay(difficulty) {
   } else if (difficulty === "hard") {
     return randomInteger(600, 1200);
   }
-  return 0;
 }
 
 function chooseHole(holes) {
@@ -37,10 +36,10 @@ function chooseHole(holes) {
 
 function gameOver() {
   if (time > 0) {
-    timeoutId = showUp();
+    let timeoutId = showUp();
     return timeoutId;
   } else {
-    gameStopped = stopGame();
+    let gameStopped = stopGame();
     return gameStopped;
   }
 }
@@ -139,7 +138,6 @@ function startGame() {
   setDuration(10);
   showUp();
   return "game started";
-  //stopGame();
 }
 
 startButton.addEventListener("click", startGame);
