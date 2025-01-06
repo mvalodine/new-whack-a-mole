@@ -182,10 +182,10 @@ function stopGame() {
 */
 function startGame() {
   clearScore();
-  stopGame(); //optional
-  setDuration(10);
+  stopGame();
+  setDuration();
   setEventListeners();
-  startTimer();
+  startTimer(10);
   showUp();
   return "game started";
 }
